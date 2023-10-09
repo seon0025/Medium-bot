@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 
 	"github.com/bwmarrin/discordgo"
 )
@@ -14,7 +13,6 @@ func createClient(token, chanId string) (*discordgo.Session, error) {
 	if err != nil {
 		return nil, err
 	}
-	log.Println(token, chanId)
 
 	client.Identify.Intents = discordgo.IntentGuildMessages
 
@@ -30,7 +28,6 @@ func createClient(token, chanId string) (*discordgo.Session, error) {
 
 func notify(session *discordgo.Session, article article) {
 
-	//content := fmt.Sprintf("%#v, here", article)
 	content := fmt.Sprintf("📰 **%s**\n%s", article.title, article.link)
 
 	_, err := session.ChannelMessageSend(channelId, content, func(cfg *discordgo.RequestConfig) {
