@@ -9,7 +9,7 @@ const (
 	duration = 10 * time.Second
 )
 
-var categories = []string{"programming", "coding"}
+var categories = []string{"programming"}
 
 type article struct {
 	title string
