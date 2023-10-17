@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	baseUrl = "https://medium.com/feed/tag"
+	baseUrl = "https://blog.msg-team.com"
 )
 
 var (
