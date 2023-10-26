@@ -39,7 +39,8 @@ func doSubscribe(url string, articleStream chan<- article) {
 
 	articles, err := parseArticles(resp.Body)
 	if err != nil {
-		panic(err)
+		log.Printf("ERROR: %s", err)
+		return
 	}
 
 	for _, article := range articles {

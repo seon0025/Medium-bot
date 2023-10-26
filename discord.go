@@ -9,7 +9,7 @@ import (
 var channelId string
 
 func createClient(token, chanId string) (*discordgo.Session, error) {
-	client, err := discordgo.New(token)
+	client, err := discordgo.New("Bot " + token)
 	if err != nil {
 		return nil, err
 	}
